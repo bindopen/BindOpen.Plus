@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="https://storage.bindopen.org/xsd/bindopen">
+  <child name="task" valueType="Task" definition="bindopen.labs.bpm$sendEmail" xmlns="https://storage.bindopen.org/xsd/bindopen/kernel" />
+  <child xmlns="https://storage.bindopen.org/xsd/bindopen/kernel">
+    <child>
+      <child valueType="Task">
+        <child name="host" valueType="Text">
+          <ref>
+            <expression kind="Word">
+              <word name="value" tokenKind="Function" />
+            </expression>
+          </ref>
+          <groupId>input</groupId>
+        </child>
+      </child>
+    </child>
+    <child />
+    <child />
+  </child>
+  <child name="input1" valueType="Text" xmlns="https://storage.bindopen.org/xsd/bindopen/kernel">
+    <groupId>input</groupId>
+    <default.items>
+      <scalar valueType="Integer">3</scalar>
+    </default.items>
+  </child>
+  <child name="input2" valueType="Text" xmlns="https://storage.bindopen.org/xsd/bindopen/kernel">
+    <groupId>input</groupId>
+    <default.items>
+      <scalar valueType="Text">value2</scalar>
+    </default.items>
+  </child>
+  <description xmlns="https://storage.bindopen.org/xsd/bindopen/kernel">
+    <add key="en">This is a workflow</add>
+  </description>
+</workflow>
