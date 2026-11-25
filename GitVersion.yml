@@ -1,0 +1,12 @@
+calculation:
+  branches:
+    develop:
+      increment: Patch
+    feature:
+      increment: Patch
+    main:
+      increment: Patch
+  commit-message-incrementing: Disabled
+  tag-prefix: 'v'
+output:
+  assembly-versioning-scheme: MajorMinorPatch
