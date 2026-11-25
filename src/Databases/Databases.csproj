@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <AssemblyName>BindOpen.Databases</AssemblyName>
+    <PackageId>BindOpen.Databases</PackageId>
+    <Product>BindOpen.Databases</Product>
+    <Company>BindOpen</Company>
+    <Copyright>Copyright © BindOpen 2011-2026</Copyright>
+    <Description>BindOpen.Logging offers a simple and multidimensional logging system, perfect to monitor nested task executions.</Description>
+    <Authors>Sumer Team</Authors>
+    <RootNamespace>BindOpen.Databases</RootNamespace>
+    <PackageProjectUrl>https://github.com/bindopen/BindOpen.Databases</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bindopen/BindOpen.Databases.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>bindopen_icon.png</PackageIcon>
+    <SignAssembly>true</SignAssembly>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>BindOpen.Databases.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\images\bindopen_icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BindOpen.Scoping.Script" Version="1.3.2" />
+  </ItemGroup>
+
+</Project>

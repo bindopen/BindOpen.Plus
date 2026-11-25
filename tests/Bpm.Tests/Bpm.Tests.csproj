@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <AssemblyName>BindOpen.Bpm.Tests</AssemblyName>
+    <PackageId>BindOpen.Bpm.Tests</PackageId>
+    <Product>BindOpen.Scoping</Product>
+    <Company>BindOpen</Company>
+    <Copyright>Copyright © BindOpen 2011-2026</Copyright>
+    <Description>This package conducts unit tests of BindOpen.Bpm.</Description>
+    <Authors>Sumer Team</Authors>
+    <RootNamespace>BindOpen.Bpm.Tests</RootNamespace>
+    <PackageProjectUrl>https://github.com/bindopen/BindOpen</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bindopen/BindOpen.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>bindopen_icon.png</PackageIcon>
+    <PackageIconUrl>https://storage.bindopen.org/org/icons/bindopen_icon_64x64.png</PackageIconUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>BindOpen.Bpm.Tests.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\images\bindopen_icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="BindOpen.Scoping.Extension" />
+    <None Remove="_Global\Fakes\ScriptWordDefinitionFake.cs~RF584f3ce1.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BindOpen.Logging" Version="1.3.2" />
+    <PackageReference Include="BindOpen.Scoping" Version="1.3.2" />
+    <PackageReference Include="Bogus" Version="35.6.5" />
+    <PackageReference Include="DeepEqual" Version="5.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.12.0" />
+    <PackageReference Include="NUnit" Version="5.0.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.3.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Bpm\Bpm.csproj" />
+  </ItemGroup>
+
+</Project>
